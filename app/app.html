@@ -1,0 +1,38 @@
+<head>
+  <title>app</title>
+</head>
+
+<body>
+  <p> Hi    {{> loginButtons}}
+
+  </p>
+  
+
+  {{> SH_Upload name="table123" }}
+
+  <!--
+    -->
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+
+
+<template name="progressBar">
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
+      <span class="sr-only">{{progress}}% Complete</span>
+    </div>
+   </div>
+</template>
+
+
+
+<template name="SH_Upload">
+  <input type="file" id="input">
+  <button>Upload</button>
+  {{progressBar}}
+</template>
